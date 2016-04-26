@@ -50,5 +50,5 @@ file { '/etc/motd':
   owner  => 'root',
   group  => 'root',
   mode   => '0644',
-  content => "Motto at the end of day 1. /r",
+  content => "Motto at the end of day 1\r\n ",
 }
