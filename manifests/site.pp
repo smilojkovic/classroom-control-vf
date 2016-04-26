@@ -45,10 +45,14 @@ node default {
   notify { "Hello, my name is ${::hostname}": }
 }
 
-file { '/etc/motd':
-  ensure => file,
-  owner  => 'root',
-  group  => 'root',
-  mode   => '0644',
-  content => "Motto at the end of day 1\r\n ",
+# file { '/etc/motd':
+#  ensure => file,
+#  owner  => 'root',
+#  group  => 'root',
+#  mode   => '0644',
+#  content => "Motto at the end of day 1\r\n ",
+#}
+
+exec { "cowsay 'Welcome to ${::fqdn}!' > /etc/motd":
 }
+
