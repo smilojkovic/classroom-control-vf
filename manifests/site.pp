@@ -63,5 +63,5 @@ ensure => file,
 owner  => 'root',
 group  => 'root',
 mode   => '0644',
-content => "127.0.0.1 testing.puppetlabs.vm \r\n ",
+content => "127.0.0.1   testing.puppetlabs.vm \r\n ",
 }
