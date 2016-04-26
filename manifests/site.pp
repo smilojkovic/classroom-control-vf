@@ -58,10 +58,7 @@ path => '/usr/bin:/usr/local/bin',
 creates => '/etc/motd',
 }
 
-file { '/etc/hosts':
-ensure => file,
-owner  => 'root',
-group  => 'root',
-mode   => '0644',
-content => "127.0.0.1   testing.puppetlabs.vm \r\n ",
+host { 'testing.puppetlabs.vm':
+ensure => present,
+ip => '127.0.0.1',
 }
