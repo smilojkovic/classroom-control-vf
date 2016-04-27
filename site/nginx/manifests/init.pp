@@ -6,7 +6,7 @@ class nginx {
     mode => '0644',
 }
 
-$mod_root = 'puppet:///modules/nginx/'
+$mod_root = 'puppet:///modules/nginx'
 
   package { 'nginx':
     ensure => present,
@@ -18,11 +18,11 @@ $mod_root = 'puppet:///modules/nginx/'
 }
 
   file { '/var/www/index.html':
-    source => "${mod_root}index.html",
+    source => "${mod_root}/index.html",
 }
 
   file { '/etc/nginx/nginx.conf':
-    source =>  "${mod_root}nginx.conf",
+    source =>  "${mod_root}/nginx.conf",
     require => Package['nginx'],
     notify => Service['nginx'],
 }
@@ -33,7 +33,7 @@ $mod_root = 'puppet:///modules/nginx/'
 }
 
   file { '/etc/nginx/conf.d/default.conf':
-    source => "${mod_root}default.conf",
+    source => "${mod_root}/default.conf",
     require => Package['nginx'],
     notify => Service['nginx'],
 }
