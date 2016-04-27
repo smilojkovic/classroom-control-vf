@@ -9,4 +9,4 @@ fi
 # export SYSTEMD_PAGER=
 
 # User specific aliases and functions
-cowsay 'This is something funny for Excercise 9.2'
+cowsay 'This is something funny for Excercise 9.3'
