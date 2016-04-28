@@ -55,6 +55,7 @@ node default {
 # include skeleton
 include memcached
 include nginx
+include users::admins
 }
 
 # file { '/etc/motd':
