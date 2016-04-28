@@ -7,7 +7,7 @@ define users::managed_user (
 # to prevent failures if run for multiple users
 if !defined(Group[$gid]) {
   group { $gid:
-    ensure +> present
+    ensure => present
   }
 }
 
