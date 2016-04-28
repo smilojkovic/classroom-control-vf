@@ -1,6 +1,6 @@
 define users::managed_user (
   $gid = $title,
-  $home = "home/${title}",
+  $home = "/home/${title}",
   $shell = '/bin/bash',
 )  {
 
