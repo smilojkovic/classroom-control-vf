@@ -30,6 +30,6 @@ file { "${home}/.ssh":
     owner     => $title,
     group     => $gid,
     mode      => '0700'
-    require   => File[$home].
+    require   => File[$home],
   }  
 }
